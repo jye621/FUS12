@@ -2,7 +2,7 @@
 // 인터랙션 UI 디자인 - OffCanvas 메뉴 / Toggle 패널
 // - DOM API, 변수, 함수, 조건문, 반복문, 연산자 등을 활용하는 총체적 예제.
 //
-// [1.1] EDIYA COFFEE 로고 오른쪽 옆에 위치한 토글 버튼(.button.is-open)을 누르면,
+// [1.1] EDIYA COFFEE 로고 오른쪽 옆에 위치한 토글 버튼(.button.is-open-menu)을 누르면,
 //       오프캔버스 메뉴(.app-navigation)을 화면에 표시한다.
 //       - hidden 속성 값 false 설정.
 //       - is-active 클래스 추가.
@@ -38,9 +38,9 @@ var menu_items     = null;
 
 // 초기화
 function init() {
-  // 문서 객체 접근 참조
+  // 문서 객체 접근 참조 DOM탐색
   accessingDOMElements();
-  // 오프캔버스 메뉴 접근성
+  // 오프캔버스 메뉴 키보드 접근성
   a11yOffCanvasMenu(app_navigation);
   // 이벤트 바인딩
   bindEvents();
@@ -106,7 +106,7 @@ init();
 
 
 // -----------------------------------------------------------------
-// 오프캔버스 메뉴 접근성
+// 오프캔버스 메뉴 키보드 접근성
 // -----------------------------------------------------------------
 function a11yOffCanvasMenu(app_navigation) {
   
